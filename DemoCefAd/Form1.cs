@@ -9,8 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Policy;
-using System.Reflection;
-using Microsoft.Web.WebView2.Core;
+using System.Reflection; 
 
 namespace DemoCefAd
 {
@@ -20,13 +19,14 @@ namespace DemoCefAd
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+          
+        private void Form1_Load_1(object sender, EventArgs e)
         {
             string path = @"Resources\index.html";
             string exeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             Uri uri = new Uri(Path.Combine(exeDirectory, path));
-            webView21.Source = uri;
-        }  
+            webBrowser1.Navigate(uri);
+
+        }
     }
 }
