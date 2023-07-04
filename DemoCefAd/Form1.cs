@@ -22,11 +22,10 @@ namespace DemoCefAd
           
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            string path = @"Resources\index.html";
-            string exeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            Uri uri = new Uri(Path.Combine(exeDirectory, path));
-            webBrowser1.Navigate(uri);
+            string path = @"Resources\index.html"; 
+            Uri uri = new Uri(Path.Combine(Application.StartupPath, path));
 
+            webBrowser1.Navigate(uri);
         }
     }
 }
