@@ -23,8 +23,7 @@ namespace DemoCefAd
         private void Form1_Load_1(object sender, EventArgs e)
         {
             string path = @"Resources\index.html"; 
-            Uri uri = new Uri(Path.Combine(Application.StartupPath, path));
-
+            Uri uri = new Uri(Path.Combine(Application.StartupPath, path)); 
             webBrowser1.Navigate(uri);
         }
     }
